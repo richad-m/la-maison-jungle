@@ -1,4 +1,5 @@
 import { plantList } from "../datas/plantList";
+import PlantItem from "./PlantItem";
 
 function ShoppingList() {
 
@@ -14,9 +15,11 @@ function ShoppingList() {
           <li key={category}>{category}</li>
         ))}
       </ul>
-      <ul>
+      <ul className = "plant-list-shop">
         {plantList.map((plant) => (
-          <li key={plant.id} className = "plant-card">{plant.name} {plant.isSpecialOffer && <span className = "lmj-sales"> Soldes!</span>}</li>
+          <li key={plant.id}>
+            <PlantItem name = {plant.name} id = {plant.id}/>
+          </li>
         ))}
       </ul>
     </div>
