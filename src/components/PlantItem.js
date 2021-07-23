@@ -1,20 +1,21 @@
-import monstera from '../assets/monstera.jpg'
 import CareScale from './CareScale'
 import '../styles/PlantItem.css'
 
-function handleClick(name) {
-  alert(`${name} ? très bon choix`)
+function handleClick(plantName) {
+	alert(`Vous voulez acheter 1 ${plantName}? Très bon choix 🌱✨`)
 }
 
-function PlantItem(props) {
-  return (
-    <div className = "lmj-plant-item" onClick = {() => handleClick(props.name)}>
-      <img src={monstera} alt="" className="lmj-plant-item-cover" />
-      {props.name}
-      <CareScale careType = 'light' scaleValue = {props.light}/>
-      <CareScale careType = 'water' scaleValue = {props.water}/>
-    </div>
-  )
+function PlantItem({ cover, name, water, light }) {
+	return (
+		<li className='lmj-plant-item' onClick={() => handleClick}>
+			<img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} />
+			{name}
+			<div>
+				<CareScale careType='water' scaleValue={water} />
+				<CareScale careType='light' scaleValue={light} />
+			</div>
+		</li>
+	)
 }
 
-export default PlantItem;
+export default PlantItem

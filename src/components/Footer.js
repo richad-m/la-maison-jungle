@@ -20,15 +20,12 @@ function Footer() {
 				Pour les passionné·e·s de plantes 🌿🌱🌵
 			</div>
 			<div className='lmj-footer-elem'>Laissez-nous votre mail :</div>
-      <form onSubmit={handleBlur}>
 			<input
 				placeholder='Entrez votre mail'
 				onChange={handleInput}
 				value={inputValue}
+				onBlur={handleBlur}
 			/>
-      <button type="submit">Entrer</button>
-
-      </form>
 		</footer>
 	)
 }
