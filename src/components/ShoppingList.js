@@ -6,12 +6,11 @@ import Categories from './Categories'
 function ShoppingList({ cart, updateCart, category, updateCategory}) {
   
     const plantListcateg = category === "Toutes les catégories" ? plantList : plantList.filter(plant => plant.category === category)
-    
     return (
       <div className="lmj-shopping-list">
-        {console.log(plantListcateg)}
       <div className="category-plant">
         <Categories category={category} updateCategory={updateCategory}/>
+        <button onClick={() => updateCategory('Toutes les catégories')}>Réinitialiser les filtres</button>
       </div>
             <ul className='lmj-plant-list'>
                 {plantListcateg.map(({ id, cover, name, water, light }) => (
