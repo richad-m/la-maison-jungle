@@ -7,13 +7,13 @@ function Cart({ cart, updateCart }) {
 
   useEffect(()=>{
       localStorage.setItem('cart', cart)
-      console.log(`cart a été modifié  ET SAUVEGARD et vaut mnt ${cart}`)
+      console.log(`cart a été modifié  ET sauvegardé et vaut mnt ${cart}`)
   })
 
-  useEffect(() => {
-      console.log(`a ete sauvegardé ${localStorage.getItem('cart')}`)
+//   useEffect(() => {
+//       console.log(`a ete sauvegardé ${localStorage.getItem('cart')}`)
       
-  }, [])
+//   }, [])
 
   return isOpen ? (
       <div className='lmj-cart'>
