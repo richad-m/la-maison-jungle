@@ -6,13 +6,13 @@ function CareScale(scaleValue, careType) {
       {range.map((nb) => (
         scaleValue >= nb ? <span key={nb.toString()}> {scaleType}</span> : null
       )
-
-
-
-
       )
       }
       </div>
   )}
+
+// function handleClick() {
+//   alert("tu cliques sur carescale là")
+// }
 
 export default CareScale;
